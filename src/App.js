@@ -1,7 +1,9 @@
 import { Route } from "react-router-dom";
 
-import Welcome from "./components/pages/Welcome";
-import Products from "./components/pages/Products";
+import Welcome from "./pages/Welcome";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+
 import MainHeader from "./components/MainHeader";
 
 function App() {
@@ -15,6 +17,10 @@ function App() {
         <Route path="/products">
           <Products />
         </Route>
+        {/* Dynamic Route */}
+        <Route path="/product-detail/:productId">
+          <ProductDetail />
+        </Route>
       </main>
     </div>
   );
@@ -24,3 +30,4 @@ export default App;
 
 // our-domain.com/ => Component A
 // our-domain.com/products => Component B
+// our-domain.com/products => Component C
